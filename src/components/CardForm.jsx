@@ -55,7 +55,7 @@ function CardForm() { //->abbiamo la props riferita alla funzione
     const count = useSelector((state) => state.counter.value)
 
     return(
-        <form onSubmit={handleSubmit} action="" className="formina flex flex-col gap-3 w-80 mb-10 justify-center mx-auto">
+        <form onSubmit={handleSubmit} action="" className="formina flex flex-col gap-3 w-80 mb-10 justify-center mx-auto rounded-xl">
             <div>
                 <b>Counter: {count}</b>
             </div>

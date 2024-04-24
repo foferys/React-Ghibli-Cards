@@ -13,14 +13,17 @@ function Contatore() {
     return (
         <div className="text-black">
             <p>Conteggio: {count}</p>
-            <button className="text-white mb-3" 
-                onClick={()=> dispatch(decrement())}>
-                Decrementa -
-            </button>
-            <button className="text-white mb-3" 
-                onClick={() => dispatch(increment())}>
-                Incrementa +
-            </button>
+            <div className="mt-3">
+
+                <button className="text-black mb-3 mr-4" 
+                    onClick={()=> dispatch(decrement())}>
+                    Decrementa -
+                </button>
+                <button className="text-black mb-3" 
+                    onClick={() => dispatch(increment())}>
+                    Incrementa +
+                </button>
+            </div>
         </div>
     );
 }

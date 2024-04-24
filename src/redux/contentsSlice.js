@@ -7,6 +7,9 @@ export const contentsSlice = createSlice({
             {
                 id:0,
                 img: "https://www.ghibli.jp/gallery/howl040.jpg", 
+                imgarr: [
+                    "https://www.ghibli.jp/gallery/howl044.jpg", "https://www.ghibli.jp/gallery/howl008.jpg", "https://www.ghibli.jp/gallery/howl040.jpg","https://www.ghibli.jp/gallery/howl023.jpg",
+                ],
                 tit: "ハウルの動く城（2004）\nHowl's Moving Castle",
                 desc: "© 2004 Diana Wynne Jones/Hayao Miyazaki/Studio Ghibli, NDDMT",
                 isVisited: true
@@ -35,6 +38,17 @@ export const contentsSlice = createSlice({
                 tit: "魔女の宅急便（1989\nKiki's Delivery Service",
                 desc: "© 1989 Eiko Kadono/Hayao Miyazaki/Studio Ghibli, N",
                 isVisited: true
+            },
+            {
+                id:4,
+                img:"https://www.ghibli.jp/gallery/totoro024.jpg", 
+                imgarr: [
+                    "https://www.ghibli.jp/gallery/totoro024.jpg", "https://www.ghibli.jp/gallery/totoro025.jpg","https://www.ghibli.jp/gallery/totoro029.jpg","https://www.ghibli.jp/gallery/totoro019.jpg",
+                ],
+                tit: "となりのトトロ（1988)\nMy Neighbor Totoro",
+                desc: "© 1988 Hayao Miyazaki/Studio Ghibli",
+                isVisited: true,
+                child: "prefe",
             },
         ],
     },
