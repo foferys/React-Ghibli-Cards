@@ -9,6 +9,7 @@ export const counterSlice = createSlice ({
         value: 0,
     },
     // i reducer(forniti da toolkit) sono le azioni o fuznioni che andiamo a fare
+    //prendono lo state (lo stato iniziale) e lo lavorano
     reducers: {
         increment: (state) => {
             state.value +=1;
@@ -16,7 +17,12 @@ export const counterSlice = createSlice ({
         decrement: (state) => {
             state.value -=1;
         },
-        incrementByAmount: (state, action) => {
+        incrementByAmount: (state, action) => { 
+            /* (state, action): Il reducer accetta due argomenti:
+            state: Rappresenta lo stato corrente del slice. Nel contesto di Redux Toolkit, lo stato è spesso un oggetto. 
+            Per counterSlice, lo stato ha una proprietà value che rappresenta il valore attuale del contatore.
+            action: L'oggetto azione che viene inviato al reducer. Oltre alla proprietà type che descrive il tipo di azione, 
+            l'oggetto azione contiene anche una proprietà payload che trasporta i dati necessari per eseguire l'azione. */
             state.value += action.payload; //-> il payload indica di quanto lo vuoi aumentare
         },
     },

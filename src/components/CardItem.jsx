@@ -6,7 +6,7 @@ function CardItem({img, title, descr, isVisited, children}) {
     //if(!isVisited) return null
     return (
      
-        <div className="rounded-md bg-zinc-950 overflow-hidden" style={{width: "270px", background:"#202025" }}>
+        <div className="singleCard rounded-md bg-zinc-950 overflow-hidden" style={{width: "270px", background:"#202025" }}>
 
             <div className="h-200" style={{height: "150px", width:"100%"}}>
                 <img style={{objectFit:"cover", height:"100%", width:"100%"}} src={img} alt="" />
