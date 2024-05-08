@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import { add } from "../redux/contentsSlice";
 
 function CardForm() { //->abbiamo la props riferita alla funzione
-    // dispatch per
+    // dispatch per eseguire azioni/modifiche
     const dispatch = useDispatch(); 
 
     // impostiamo i valori dei campi della form a vuoto (negli imput value abbiamo -> value={form.tit} ecc)
