@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 
 function Contatti() {
-
+    //ho preso direttamente il valore del counter usalndo useSelector, che lo pesca attraverso lo store e counterSlice
     const count = useSelector((state) => state.counter.value);
 
     return (

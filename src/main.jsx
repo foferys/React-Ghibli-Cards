@@ -12,7 +12,8 @@ import CardsChildren from './pages/CardsChildren.jsx';
 import store from "./redux/store";
 import { Provider } from 'react-redux';
 
-
+/* STRUTTURA PER MANDARE A SCHERMO I COMPONENTI COME  FOSSERO PAGINE */
+//ARRAY DI OGGETTI per instradare le singole azioni/pagine
 const rounter = createBrowserRouter([
   {
     path: "/",
@@ -35,8 +36,11 @@ const rounter = createBrowserRouter([
     element: <Card />,
   },
   {
+    /* in cards-children se  premiamo su una delle card all'interno abbiamo un altro percorso che viene aperto 
+    nella stessa pagina inserendo il cardID-> perché su CardsChildren ho messo al Link "cards-children/id*/
     path: "/cards-children",
     element: <CardsChildren></CardsChildren>,
+    //il figlio interno se si clicca
     children: [
       {
         path: ":cardID",
@@ -47,9 +51,10 @@ const rounter = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  //React.StrictMode lo abbiamo sempre avuto
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={rounter} />
+      <RouterProvider router={rounter} /> {/* RouterProvider è quello che si occupa dell'instradamento */}
     </Provider>
   </React.StrictMode>
 );

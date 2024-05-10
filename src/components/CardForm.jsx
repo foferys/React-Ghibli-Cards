@@ -31,7 +31,7 @@ function CardForm() { //->abbiamo la props riferita alla funzione
     const handleSubmit = (e)=> {
         e.preventDefault() //-> evitiamo l'invio della form
         const elemento = { 
-            id: Math.random(),
+            id: Math.floor(Math.random() * (5-10000)+10000), //-> numero intero minimo 5 massimo 10000
             img: form.img,
             tit: form.tit,
             desc: form.desc,

@@ -48,6 +48,7 @@
 }
 .singleCard{
   transition: all 0.2s ease-in-out;
+  opacity: 0;
 }
 .singleCard:hover{
   transform: scale(1.1);
