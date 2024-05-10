@@ -30,16 +30,16 @@ function Navbar() {
                                 <Link to={'/'}>Home</Link>
                             </li>
                             <li>
-                                <Link to={'/contatti'}>contatti</Link>
+                                <Link to={'/cards'}>All movies</Link>
+                            </li>
+                            <li>
+                                <Link to={'/cards-children'}>All Mov.Intern</Link>
                             </li>
                             <li>
                                 <Link to={'/about'}>About</Link>
                             </li>
                             <li>
-                                <Link to={'/cards'}>All movies</Link>
-                            </li>
-                            <li>
-                                <Link to={'/cards-children'}>Cards versione 2</Link>
+                                <Link to={'/contatti'}>contatti</Link>
                             </li>
                         </ul>
                     </div>

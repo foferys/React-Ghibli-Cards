@@ -1,6 +1,11 @@
 import Navbar from "../components/Navbar";
+import TimerProva from "../hooks/TimerProva";
 
 function About() {
+
+    //utilizzo dell'hook personalizzato TimerProva.jsx
+    TimerProva();
+
     return (
         <>
             <Navbar></Navbar>
