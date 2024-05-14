@@ -1,11 +1,15 @@
 /* SINGOLA CARD */
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { deleteContent } from "../redux/contentsSlice";
 
 
 
-function CardItem({img, title, descr, isVisited, children}) {
+function CardItem({id, img, title, descr, isVisited, children}) {
 
+    //animazione gsap
     const myCard = useRef(null);
 
     useEffect(() => {
@@ -16,15 +20,25 @@ function CardItem({img, title, descr, isVisited, children}) {
         })
     }, []);
     
+    const dispatch = useDispatch()
+
+    const handleDelete = () => {
+        /* console.log(e.target.dataset.id) */
+        dispatch(deleteContent(id));
+    }
+    
     /* se si fa cosi quando è false non viene proprio visualizzato */
     //if(!isVisited) return null
     return (
      
         <div ref={myCard} className="singleCard rounded-md bg-zinc-950 overflow-hidden" style={{width: "270px", background:"#202025" }}>
+            <Link to={`/cards/${id}`}>
 
-            <div className="h-200" style={{height: "150px", width:"100%"}}>
-                <img style={{objectFit:"cover", height:"100%", width:"100%"}} src={img} alt="" />
-            </div>
+                <div className="h-200 singleCardImg" style={{height: "150px", width:"100%"}}>
+                    <img style={{objectFit:"cover", height:"100%", width:"100%"}} src={img} alt="" />
+                </div>
+
+            </Link>
 
             <div className="flex flex-col p-5">
                 <h2 className='font-white font-bold'>{title}</h2>
@@ -36,7 +50,9 @@ function CardItem({img, title, descr, isVisited, children}) {
             
                 {/* in questo modo usando && dove è impostato lo visualizza altrimenti lascia vuoto */}
                 {/* {isVisited && <span className="text-green-200">Visitata</span>} */}
-                
+    
+                {/* usiamo il dataset altrimenti non lo prende normalemnte prendendolo dalle props */}
+                <button onClick={handleDelete} className="bg-red-600 text-white mt-4">Elimina</button>
             </div>
         </div>
  

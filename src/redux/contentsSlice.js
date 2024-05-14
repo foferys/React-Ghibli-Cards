@@ -54,12 +54,30 @@ export const contentsSlice = createSlice({
     },
     reducers: {
         //abbiamo un unico reducer in questo caso per aggiugnere ma potremmo averne altri per rimuovere ecc
+        //action fa riferimento al valore che gli viene passato quando viene chiamato(un numero, un array ecc)
         add: (state, action) => {
             state.value.push(action.payload)
         },
+        deleteContent: (state, action) => {
+            /* 
+            La condizione if viene valutata in base al valore restituito da findIndex, ma questo metodo restituisce -1 
+            se l'elemento non viene trovato nell'array. Tuttavia, se l'elemento viene trovato come primo elemento 
+            dell'array, findIndex restituirà 0 e, Poiché in JavaScript il valore 0 viene considerato come un valore 
+            falso all'interno di una condizione if, il blocco di codice all'interno di if(indice) non verrà eseguito 
+            quando l'elemento da eliminare si trova alla prima posizione dell'array se non mettiamo >= 0.
+            */
+            const indice = state.value.findIndex(item => item.id == action.payload);
+         
+            if(indice>= 0) {
+                console.log(indice);
+                state.value.splice(indice, 1);
+            }
+           
+            /* state.value.delete() */
+        }
     },
 })
 
-export const {add} = contentsSlice.actions;
+export const {add, deleteContent} = contentsSlice.actions;
 
 export const contentsReducer = contentsSlice.reducer;

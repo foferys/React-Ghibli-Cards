@@ -47,10 +47,12 @@
   padding: 2em;
 }
 .singleCard{
-  transition: all 0.2s ease-in-out;
   opacity: 0;
 }
-.singleCard:hover{
+.singleCardImg{
+  transition: all 0.2s ease-in-out;
+}
+.singleCardImg:hover{
   transform: scale(1.1);
 }
 

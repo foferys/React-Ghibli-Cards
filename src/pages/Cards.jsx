@@ -29,16 +29,16 @@ function Cards() {
                 {
                 //-> tutto lo stato dell'elemento delle card 
                 contents.map((el) => ( //possiamo aggiungere .filter( (el) => el.isVisited) // .filter() filtra gli elementi indicati
-                    <Link to={`/cards/${el.id}`} key={el.id}>
-                    
+                
+                    <div key={el.id} >
                         {/*passiamo i valori dell'oggetto come props al componente Card.jsx */}
-                        <CardItem key={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited}>
+                        <CardItem id={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited}>
                             <br />
                             {//verifica se c'è un valore child nell'oggetto degli elementi e lo stampa qui altrimenti non stampa nulla
                             el.child? <p className='text-xs'>*{el.child}</p> : ""
-                            } 
+                        } 
                         </CardItem>
-                    </Link>
+                    </div>
                 ))
                 }
             </div>
