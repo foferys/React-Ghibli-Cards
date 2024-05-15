@@ -19,7 +19,8 @@ function CardsChildren() {
                     //passiamo i valori dell'oggetto come props al componente Card.jsx - la key viene messa a Link
                     //perché è gia dal link che è univoco
                     <div key={el.id} >
-                        {/*passiamo i valori dell'oggetto come props al componente Card.jsx */}
+                        {/*passiamo i valori dell'oggetto come props al componente Card.jsx  -- la props intern usata per vedere a che 
+                        link andare nella singola card CardItem*/}
                         <CardItem id={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited} intern={true}>
                             <br />
                             {//verifica se c'è un valore child nell'oggetto degli elementi e lo stampa qui altrimenti non stampa nulla
