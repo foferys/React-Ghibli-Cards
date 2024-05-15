@@ -20,7 +20,7 @@ function CardsChildren() {
                     //perché è gia dal link che è univoco
                     <div key={el.id} >
                         {/*passiamo i valori dell'oggetto come props al componente Card.jsx */}
-                        <CardItem id={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited}>
+                        <CardItem id={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited} intern={true}>
                             <br />
                             {//verifica se c'è un valore child nell'oggetto degli elementi e lo stampa qui altrimenti non stampa nulla
                             el.child? <p className='text-xs'>*{el.child}</p> : ""

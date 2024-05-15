@@ -7,7 +7,7 @@ import { deleteContent } from "../redux/contentsSlice";
 
 
 
-function CardItem({id, img, title, descr, isVisited, children}) {
+function CardItem({id, img, title, descr, isVisited, children, intern}) {
 
     //animazione gsap
     const myCard = useRef(null);
@@ -32,7 +32,8 @@ function CardItem({id, img, title, descr, isVisited, children}) {
     return (
      
         <div ref={myCard} className="singleCard rounded-md bg-zinc-950 overflow-hidden" style={{width: "270px", background:"#202025" }}>
-            <Link to={`/cards/${id}`}>
+            {/* ternario che verifica se da cardItem viene passata la props intern che viene usata fare un altro reindirizzamanto */}
+            <Link to={intern? `/cards-children/${id}`:`/cards/${id}` }>
 
                 <div className="h-200 singleCardImg" style={{height: "150px", width:"100%"}}>
                     <img style={{objectFit:"cover", height:"100%", width:"100%"}} src={img} alt="" />
