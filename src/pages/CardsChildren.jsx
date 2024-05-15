@@ -18,15 +18,15 @@ function CardsChildren() {
                 movies.map((el) => ( //possiamo aggiungere .filter( (el) => el.isVisited) // .filter() filtra gli elementi indicati
                     //passiamo i valori dell'oggetto come props al componente Card.jsx - la key viene messa a Link
                     //perché è gia dal link che è univoco
-                    <Link to={`/cards-children/${el.id}`} key={el.id}> 
-                    
-                        <CardItem key={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited}>
+                    <div key={el.id} >
+                        {/*passiamo i valori dell'oggetto come props al componente Card.jsx */}
+                        <CardItem id={el.id} img={el.img} title={el.tit} descr={el.desc} isVisited={el.isVisited}>
                             <br />
-                            {//verifica se c'è un valore child e lo stampa in quel punto
-                                el.child?<p className='text-xs'>*{el.child}</p>:""
-                            } 
+                            {//verifica se c'è un valore child nell'oggetto degli elementi e lo stampa qui altrimenti non stampa nulla
+                            el.child? <p className='text-xs'>*{el.child}</p> : ""
+                        } 
                         </CardItem>
-                    </Link>
+                    </div>
                 ))
                 }
             </div>

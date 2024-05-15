@@ -17,13 +17,14 @@ function Cards() {
     const location = useLocation();
     const isHome = location.pathname=='/';
 
+    var cardsCount = contents.length;
 
     return (
         <>
             {/* per non far comparire la home se siamo nella home perché altrimenti sarebbe ripetuta, la mostra se sono nella pagina delle cards */}
             {isHome? "":<Navbar></Navbar>}
             
-            {isHome? <h1 className="homeTit mb-4">My Ghibli cards ❤️‍🩹</h1>:<h1 className="mb-4"> All Ghibli cards page - counter: {counter} </h1>}
+            {isHome? <h1 className="homeTit mb-4">My Ghibli cards({cardsCount}) ❤️‍🩹</h1>:<h1 className="mb-4"> All Ghibli cards page - counter: {counter} </h1>}
             
             <div className='flex flex-row gap-10 flex-wrap justify-center'>
                 {

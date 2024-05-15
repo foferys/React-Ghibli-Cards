@@ -24,7 +24,7 @@ function CardForm() { //->abbiamo la props riferita alla funzione
         //richiamiamo la funzione dello stato, inseriamo i valori gia presenti e riassegniamo i valori
         //a seconda di cosa è name e a quella chiave imposta il valore di inputValue -> es. [ descr : messaggio scritto in input ]
         setForm({...form, [name]: inputValue})
-        console.log("name: "+name, "-value: "+value,"-type: "+ type, "-checked: "+ checked);
+        // console.log("name: "+name, "-value: "+value,"-type: "+ type, "-checked: "+ checked);
     }
 
     //definiamo cosa deve fare la funzione e la impostiamo all'avvenuto submit della form

@@ -15,7 +15,7 @@ function Contatore() {
 
     return (
         <div className="text-black">
-            <p>Conteggio: {count}</p>
+            <p>Tieni il conto! siamo a {count}</p>
             <div className="mt-3">
 
                 <button className="bg-black text-white mb-3 mr-4" 
