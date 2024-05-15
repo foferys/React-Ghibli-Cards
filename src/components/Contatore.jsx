@@ -18,11 +18,11 @@ function Contatore() {
             <p>Tieni il conto! siamo a {count}</p>
             <div className="mt-3">
 
-                <button className="bg-black text-white mb-3 mr-4" 
+                <button className="bg-red-400 text-white mb-3 mr-4" 
                     onClick={()=> dispatch(decrement())}>
                     Decrementa -
                 </button>
-                <button className="bg-black text-white mb-3" 
+                <button className="bg-lime-600 text-white mb-3" 
                     onClick={() => dispatch(increment())}>
                     Incrementa +
                 </button>

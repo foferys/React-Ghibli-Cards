@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import CardItem from "../components/CardItem";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 //usare useLocation per avere il path della pagina
 import { useLocation } from 'react-router-dom';
 
@@ -26,7 +25,7 @@ function Cards() {
             
             {isHome? <h1 className="homeTit mb-4">My Ghibli cards({cardsCount}) ❤️‍🩹</h1>:<h1 className="mb-4"> All Ghibli cards page - counter: {counter} </h1>}
             
-            <div className='flex flex-row gap-10 flex-wrap justify-center'>
+            <div className='mt-4 flex flex-row gap-10 flex-wrap justify-center'>
                 {
                 //-> tutto lo stato dell'elemento delle card 
                 contents.map((el) => ( //possiamo aggiungere .filter( (el) => el.isVisited) // .filter() filtra gli elementi indicati
