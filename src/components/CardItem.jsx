@@ -45,7 +45,7 @@ function CardItem({id, img, title, descr, isVisited, children, intern}) {
                 <h2 className='font-white font-bold'>{title}</h2>
                 <p className='text-gray-500'>{descr}</p>
 
-                {children}
+                <span className="text-white">{children}</span>
             
                 <span className={isVisited?"text-green-200": "text-red-400"}>{isVisited?"Watched": "to watch"}</span>
             

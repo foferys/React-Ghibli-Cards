@@ -2,8 +2,7 @@ import { useState, useContext } from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { add } from "../redux/contentsSlice";
 import React from "react";
-
-
+// import dei materiali per i componenti tailwind
 import {
   Button,
   Dialog,
