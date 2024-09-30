@@ -7,6 +7,7 @@ import CarouselImg from "../components/Carosello";
 function Card() {
 
     //useParams() va a premdere il parametro {cardID} che si trova dopo lo slash / nell'url.
+    //il nome della variabile {cardID} deve essere uguale al nome del parametro indicato nella route
     const {cardID} = useParams();
   
     //prendo lo stato dei film usando useSelector e lo filtro per l'id che abbiamo. Questo mi da un array con un solo
