@@ -57,5 +57,5 @@
   color: #888;
 }
 
-.formina {padding: 20px;background: #43799d;}
+.formina {padding: 20px;background: #43799d; width: 100%;}
 .formina input,.formina textarea{background: #eae6e1;color: black;}

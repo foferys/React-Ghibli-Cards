@@ -115,7 +115,7 @@ function CardForm() { //->abbiamo la props riferita alla funzione
                         Inserisci tutti i dati richiesti
                     </Typography>
 
-                    <form onSubmit={handleSubmit} action="" className="formina flex flex-col gap-3 w-80 mb-10 justify-center mx-auto rounded-xl">
+                    <form onSubmit={handleSubmit} action="" className="formina flex flex-col gap-3 mb-10 justify-center mx-auto rounded-xl">
                         <div>
                             <b className="text-white">Counter: {count}</b>
                         </div>
