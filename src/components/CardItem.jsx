@@ -26,14 +26,16 @@ function CardItem({id, img, title, descr, isVisited, children, intern}) {
         /* console.log(e.target.dataset.id) */
         dispatch(deleteContent(id));
     }
-    
+
+
+   
     /* se si fa cosi quando è false non viene proprio visualizzato */
     //if(!isVisited) return null
     return (
      
         <div ref={myCard} className="singleCard rounded-md bg-zinc-950 overflow-hidden" style={{width: "270px", background:"#202025" }}>
-            {/* ternario che verifica se da cardItem viene passata la props intern che viene usata fare un altro reindirizzamanto */}
-            <Link to={intern? `/cards-children/${id}`:`/cards/${id}` }>
+            {/* ternario che verifica se da cardItem viene passata la props intern che viene usata per fare un altro reindirizzamanto */}
+            <Link to={intern? `/cards-children/${id}/esempioParametro`:`/cards/${id}` }>
 
                 <div className="h-200 singleCardImg" style={{height: "150px", width:"100%"}}>
                     <img style={{objectFit:"cover", height:"100%", width:"100%"}} src={img} alt="" />

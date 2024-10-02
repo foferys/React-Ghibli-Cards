@@ -24,6 +24,7 @@ export const counterSlice = createSlice ({
             action: L'oggetto azione che viene inviato al reducer. Oltre alla proprietà type che descrive il tipo di azione, 
             l'oggetto azione contiene anche una proprietà payload che trasporta i dati necessari per eseguire l'azione. */
             state.value += action.payload; //-> il payload indica di quanto lo vuoi aumentare
+            //nel Contatore.jsx quando chiameremo incrementByAmount() tramite dispatch dovremo dicicare di quanto
         },
     },
 

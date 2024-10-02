@@ -32,12 +32,14 @@ const rounter = createBrowserRouter([
     element: <Cards></Cards>,
   },
   {
+    // quando clicclo sulla card singola, in CardItem.jsx ho messo un ternario che se mi trovo nella pagina delle cards rimanda a questo mapping che 
+    //rimanderà alla pagina della singola card
     path: "/cards/:cardID",
     element: <Card />,
   },
   {
     /* in cards-children se  premiamo su una delle card all'interno abbiamo un altro percorso che viene aperto 
-    nella stessa pagina inserendo il cardID-> perché su CardsChildren ho messo al Link "cards-children/id*/
+    nella stessa pagina inserendo il cardID-> perché su CardItem ho messo al Link "cards-children/id*/
     path: "/cards-children",
     element: <CardsChildren></CardsChildren>,
     //il figlio interno se si clicca
@@ -45,7 +47,12 @@ const rounter = createBrowserRouter([
       {
         path: ":cardID",
         element: <Card />,
-      }
+      },
+      {
+        // esempio di come passo un altro parametro -> su cardItem ho messo al Link "cards-children/id/esempioParametro
+        path: ":cardID/:altroParametro",
+        element: <Card />,
+      },
     ],
   },
 ])

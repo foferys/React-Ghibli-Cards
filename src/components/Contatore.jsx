@@ -1,5 +1,5 @@
 //importiamo increment e decrement creati nel file js
-import { increment, decrement } from "../redux/counterSlice";
+import { increment, decrement, incrementByAmount } from "../redux/counterSlice";
 //importiamo anche useSelector e useDispatch:
 //con useSelector consumiamo (prendere un valore) mentre 
 //con useDispatch diciamo voglio essere in grado di mandare ordini di modifica, non solo leggerlo
@@ -22,9 +22,13 @@ function Contatore() {
                     onClick={()=> dispatch(decrement())}>
                     Decrementa -
                 </button>
-                <button className="bg-lime-600 text-white mb-3" 
+                <button className="bg-lime-600 text-white mb-3 mr-4" 
                     onClick={() => dispatch(increment())}>
                     Incrementa +
+                </button>
+                <button className="bg-lime-600 text-white mb-3" 
+                    onClick={() => dispatch(incrementByAmount(5))}>
+                    Incrementa di 5
                 </button>
             </div>
         </div>

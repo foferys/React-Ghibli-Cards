@@ -9,7 +9,7 @@ function CardsChildren() {
     return (
         <>
             <Navbar></Navbar>
-            <h1 className="mb-4">pagina con tutte le cards</h1>
+            <h1 className="mb-4 text-blue-gray-900">Pagina con tutte le cards</h1>
             <div className='flex flex-row gap-10 flex-wrap justify-center'>
                 {
                 //-> tutto lo stato dell'elemento delle card 

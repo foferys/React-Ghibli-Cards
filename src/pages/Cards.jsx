@@ -12,6 +12,7 @@ function Cards() {
     const contents = useSelector((state) => state.movies.value);
     //stampo anche il counter qui per prova
     const counter = useSelector((state)=> state.counter.value);
+    
     // uso queste variabile per capire in che pagina sono e lo uso sotto
     const location = useLocation();
     const isHome = location.pathname=='/';
